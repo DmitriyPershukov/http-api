@@ -9,10 +9,12 @@ import akka.http.scaladsl.server.Directives._
 import akka.http.scaladsl.server.Route
 import akka.stream.ActorMaterializer
 import spray.json.RootJsonFormat
+import scala.io.StdIn
 import spray.json.DefaultJsonProtocol._
 
 import scala.concurrent.ExecutionContext.Implicits.global
-import scala.concurrent._
+
+Inimport scala.concurrent._
 import scala.util.{Failure, Success}
 
 object webService extends App {
@@ -73,4 +75,5 @@ object webService extends App {
     }
   )
   val bindingFuture = Http().bindAndHandle(routes, "localhost", 8080)
+  StdIn.readLine()
 }
