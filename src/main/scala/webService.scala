@@ -8,10 +8,10 @@ import akka.http.scaladsl.model.{MessageEntity, StatusCodes}
 import akka.http.scaladsl.server.Directives._
 import akka.http.scaladsl.server.Route
 import akka.stream.ActorMaterializer
-import spray.json.RootJsonFormat
+
 import scala.io.StdIn
 import spray.json.DefaultJsonProtocol._
-
+import spray.json.RootJsonFormat
 import scala.concurrent.ExecutionContext.Implicits.global
 
 Inimport scala.concurrent._
